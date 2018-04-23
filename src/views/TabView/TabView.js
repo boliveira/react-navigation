@@ -186,7 +186,7 @@ class TabView extends React.PureComponent {
       onIndexChange: this._handlePageChanged,
       navigationState: this.props.navigation.state,
       screenProps: this.props.screenProps,
-      style: styles.container,
+      style: [styles.container, this.props.style],
     };
 
     return <TabViewAnimated {...props} />;

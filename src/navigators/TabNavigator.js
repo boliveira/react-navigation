@@ -25,6 +25,7 @@ const TabNavigator = (routeConfigs, config = {}) => {
     animationEnabled,
     configureTransition,
     initialLayout,
+    tabViewStyle,
     ...tabsConfig
   } = mergedConfig;
 
@@ -42,6 +43,7 @@ const TabNavigator = (routeConfigs, config = {}) => {
       animationEnabled={animationEnabled}
       configureTransition={configureTransition}
       initialLayout={initialLayout}
+      style={tabViewStyle}
     />
   ));
 
