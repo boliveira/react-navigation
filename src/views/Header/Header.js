@@ -232,6 +232,8 @@ class Header extends React.PureComponent {
     const style = {};
     const { transitionPreset } = this.props;
 
+    const sceneOptions = this.props.getScreenDetails(props.scene).options;
+
     if (Platform.OS === 'android') {
       if (!options.hasLeftComponent) {
         style.left = 0;
@@ -246,6 +248,16 @@ class Header extends React.PureComponent {
     ) {
       style.left = 0;
       style.right = 0;
+    }
+
+    if(options.headerFill) {
+      if(!options.hasLeftComponent) {
+        style.left = 0;
+      }
+
+      if(!options.hasRightComponent) {
+        style.right = 0;
+      }
     }
 
     return this._renderSubView(
