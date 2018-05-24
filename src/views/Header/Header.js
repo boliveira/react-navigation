@@ -250,7 +250,7 @@ class Header extends React.PureComponent {
       style.right = 0;
     }
 
-    if(options.headerFill) {
+    if(sceneOptions.headerFill) {
       if(!options.hasLeftComponent) {
         style.left = 0;
       }
