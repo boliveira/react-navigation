@@ -107,6 +107,14 @@ class CardStack extends React.Component {
         delete this._childEventSubscribers[key];
       }
     });
+    
+    const activeSceneKeys = this.props.transitionProps.scenes.map( scene => scene.key);
+
+    Object.keys(this._screenDetails).forEach(key => {
+      if (!activeSceneKeys.includes(key)) {
+        delete this._screenDetails[key];
+      }
+    });
   }
 
   _isRouteFocused = route => {
