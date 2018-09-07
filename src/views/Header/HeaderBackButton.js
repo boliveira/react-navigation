@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
           height: 21,
           width: 13,
           marginLeft: 9,
-          marginRight: 22,
+          marginRight: 15,
           marginVertical: 12,
           resizeMode: 'contain',
           transform: [{ scaleX: I18nManager.isRTL ? -1 : 1 }],
