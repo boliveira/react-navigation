@@ -161,7 +161,7 @@ export default class DrawerView extends React.PureComponent {
         }}
         drawerLockMode={
           (this.props.screenProps && this.props.screenProps.drawerLockMode) ||
-          (config && config.drawerLockMode)
+          this.props.drawerLockMode
         }
         drawerBackgroundColor={this.props.drawerBackgroundColor}
         drawerWidth={this.state.drawerWidth}
