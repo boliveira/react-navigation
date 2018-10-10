@@ -253,10 +253,14 @@ class Header extends React.PureComponent {
     if(sceneOptions.headerFill) {
       if(!options.hasLeftComponent) {
         style.left = 0;
+      }else if(Platform.OS === 'ios' && sceneOptions.iosTitleOffset) {
+        style.left = sceneOptions.iosTitleOffset;
       }
 
       if(!options.hasRightComponent) {
         style.right = 0;
+      }else if(Platform.OS === 'ios' && sceneOptions.iosTitleOffset) {
+        style.right = sceneOptions.iosTitleOffset;
       }
     }
 
