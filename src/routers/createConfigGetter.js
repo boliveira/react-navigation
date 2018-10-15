@@ -51,11 +51,11 @@ export default (routeConfigs, navigatorScreenConfig) => (
     const childRoute = routes[index];
     const childNavigation = addNavigationHelpers({
       state: childRoute,
-      dispatch,
-      addListener: getChildEventSubscriber(
-        navigation.addListener,
-        childRoute.key
-      ),
+      dispatch
+      // addListener: getChildEventSubscriber(
+      //   navigation.addListener,
+      //   childRoute.key
+      // ),
     });
     outputConfig = router.getScreenOptions(childNavigation, screenProps);
   }
