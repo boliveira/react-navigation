@@ -53,8 +53,10 @@ class Transitioner extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    const scenesThatAreNotStale = this.state.scenes.filter(isSceneNotStale);
+
     const nextScenes = NavigationScenesReducer(
-      this.state.scenes,
+      scenesThatAreNotStale,
       nextProps.navigation.state,
       this.props.navigation.state
     );
